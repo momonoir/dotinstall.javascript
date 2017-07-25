@@ -28,6 +28,71 @@
     else {
       console.log("ng!");
     }
+
+// switch文
+var signal = "green";
+switch(signal) {
+  case "red":
+    console.log("stop!");
+    break;
+  case "green":
+    console.log("go!");
+    break;
+  case "yellow":
+    console.log("slow down");
+    break;
+}
+
+//while,while do 文
+var i = 0;
+while (i < 10) {
+  console.log(i);
+  i++;
+}
+
+do {
+  console.log(i);
+  i++;
+}while (i < 10);
+
+//for文
+    for (var i = 0; i < 10; i++) {
+      if (i === 5) {
+        // break; ループを抜けたいとき、下は飛ばしたいとき
+        continue;
+      }
+      console.log(i);
+    }
+
+//alert,confirm,prompt
+alert ("hello");
+
+var answer = confirm("are you sure?");
+console.log(answer);
+
+var name = prompt("お名前は？")
+console.log(name);
+
+//関数
+/*
+function hello(name) {
+  var msg = "hello" + name; //ローカル変数
+  console.log("hello" + name);
+}
+hello("tom")
+*/
+
+var hello = function(name) {//無名関数、匿名関数
+  var msg ="hello" + name;
+  return msg;
+};
+var greet = hello("tom");
+  console.log(greet);
+
+(function hi(name) {
+  console.log("hi" + name);
+})("Tom");
+
   </script>
   文章の内容
 </body>
