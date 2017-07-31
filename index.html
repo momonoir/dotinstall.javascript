@@ -7,6 +7,7 @@
 
 <body>
   <script type="text/javascript">
+  /*
     var x;
     x = 10 * 2;
     x = 10 % 3;
@@ -17,7 +18,7 @@
     s ="it's \na \tpen."
     console.log(s);
 
-    /* if文 */
+    // if文
     var score = 90;
     if (score > 60) {
       console.log("ok!");
@@ -91,8 +92,20 @@ var greet = hello("tom");
 
 (function hi(name) {
   console.log("hi" + name);
-})("Tom");
+})("Tom");//即時関数
 
+//タイマー処理
+var i = 0;
+function show() {
+  console.log(i++);
+  var tid = setTimeout(function() {
+    show();
+  },1000);
+  if (i > 3) {
+    clearTimeout(tid);
+  }
+}
+show();
   </script>
   文章の内容
 </body>

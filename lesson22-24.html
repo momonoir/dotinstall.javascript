@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>lesson16～</title>
+<style>
+  .myStyle {
+    font-weight: bold;
+    border: 1px solid gray;
+  }
+</style>
+</head>
+
+<body>
+<h1>見出し</h1>
+<p id="msg">こんにちは！</p>
+<button id="add">Click!</button>
+  <script type="text/javascript">
+var e = document.getElementById("msg");//IDを取得
+e.textContent = "hello!"; //テキストを書き換える
+e.style.color ="red";
+e.className ="myStyle";
+
+document.getElementById("add").addEventListener("click", function() {
+  var greet = document.createElement("p")
+      text = document.createTextNode("hello world");
+  document.body.appendChild(greet).appendChild(text);
+})
+  </script>
+</body>
+
+</html>
